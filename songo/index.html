@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songo Roch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>SONGO de Roch</h1>
+
+    <div id="scores">
+
+        <div class="player-score">
+            <h2>Nord</h2>
+            <span id="northScore">0</span>
+        </div>
+
+        <div class="player-score">
+            <h2>Sud</h2>
+            <span id="southScore">0</span>
+        </div>
+
+    </div>
+
+    <div id="currentPlayer">
+        Tour du joueur : <span id="playerTurn">SUD</span>
+    </div>
+
+    <div id="board">
+
+        <div id="north-row"></div>
+
+        <div id="south-row"></div>
+
+    </div>
+
+    <div id="message"></div>
+
+    <button id="restartBtn">
+        Nouvelle Partie
+    </button><br/><br/>
+    <button id="rulesBtn">Voir les règles</button>
+
+    <script src="js/game.js"></script>
+    <div id="rulesModal" class="modal hidden">
+    <div class="modal-content">
+
+        <h2>Règles du Songo</h2>
+
+        <div class="rules-text">
+
+            <p><strong>Objectif :</strong> atteindre 40 graines ou avoir plus que l’adversaire.</p>
+
+            <p><strong>Départ :</strong> 14 cases (7 par joueur) avec 5 graines chacune.</p>
+
+            <p><strong>Tour de jeu :</strong> on prend toutes les graines d’une case et on les distribue une à une dans le sens du jeu.</p>
+
+            <p><strong>Captures :</strong> on capture dans le camp adverse si la dernière graine tombe dans une case contenant 2 à 4 graines.</p>
+
+            <p><strong>Prise en chaîne :</strong> on continue à capturer vers les cases précédentes si elles respectent les mêmes conditions.</p>
+
+            <p><strong>Solidarité :</strong> si un camp est vide, il faut envoyer des graines vers ce camp.</p>
+
+            <p><strong>Fin de partie :</strong> 40 graines, moins de 10 graines restantes, ou impossibilité de jouer.</p>
+
+        </div>
+
+        <button id="closeRules">Fermer</button>
+
+    </div>
+</div>
+
+</body>
+
+</html>
